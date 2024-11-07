@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class tools {
 
-    public String response = "";
+    public static String response = "";
 
-    public void scannerResponse() {
+    public static String scannerResponse() {
         Scanner scanner = new Scanner(System.in);
         String placeholder = scanner.nextLine();
-        response = placeholder.toLowerCase();
+        return placeholder.toLowerCase();
     }
 }

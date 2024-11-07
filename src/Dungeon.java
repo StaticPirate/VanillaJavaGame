@@ -15,14 +15,14 @@ public class Dungeon {
                 "Stop the game:  /stop");
     }
 
-    public static void roomPicker(String response) {
+    public static void roomPicker() {
         System.out.println("Pick Dungeon Theme:\n" +
                 "Ice\n" +
                 "Fire\n" +
                 "Stone\n");
         System.out.println("Please pick one of the options.");
 
-        tools.scannerResponse();
+        String response = tools.scannerResponse();
 
         if (findWord(response, "ice")) {
             rooms.iceDungeon();
