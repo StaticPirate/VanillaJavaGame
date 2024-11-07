@@ -3,14 +3,6 @@ import java.util.Scanner;
 
 public class Dungeon {
 
-    public String response = "";
-
-    public void scannerResponse() {
-        Scanner scanner = new Scanner(System.in);
-        String placeholder = scanner.nextLine();
-        response = placeholder.toLowerCase();
-    }
-
     public static boolean findWord(String searchWord, String stringToBeSearched) {
         if (stringToBeSearched.contentEquals(searchWord)) {
             return true;
@@ -23,14 +15,14 @@ public class Dungeon {
                 "Stop the game:  /stop");
     }
 
-    public void roomPicker(String response) {
+    public static void roomPicker(String response) {
         System.out.println("Pick Dungeon Theme:\n" +
                 "Ice\n" +
                 "Fire\n" +
                 "Stone\n");
         System.out.println("Please pick one of the options.");
 
-        scannerResponse();
+        tools.scannerResponse();
 
         if (findWord(response, "ice")) {
             rooms.iceDungeon();
